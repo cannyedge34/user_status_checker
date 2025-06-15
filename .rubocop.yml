@@ -1,0 +1,70 @@
+plugins:
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 3.2
+  NewCops: enable
+  SuggestExtensions: false
+  Exclude:
+    - 'bin/**/*'
+    - 'db/schema.rb'
+    - 'node_modules/**/*'
+    - 'tmp/**/*'
+    - 'vendor/**/*'
+
+Layout/LineLength:
+  Max: 120
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+
+################## Style #################################
+
+Style/Documentation:
+  Description: "Document classes and non-namespace modules."
+  Enabled: false
+
+Naming/FileName:
+  Description: "Use snake_case for source file names."
+  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#snake-case-files"
+  Enabled: true
+
+
+###################### Metrics ####################################
+
+Metrics/MethodLength:
+  Description: "Avoid methods longer than 30 lines of code."
+  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#short-methods"
+  Enabled: true
+  Max: 50
+
+Metrics/AbcSize:
+  Description: >-
+    A calculated magnitude based on number of assignments,
+    branches, and conditions.
+  Reference: "http://c2.com/cgi/wiki?AbcMetric"
+  Enabled: false
+  Max: 20
+  Exclude:
+    - "spec/**/*"
+
+# =============================
+# =====    RSpec  =============
+# =============================
+
+RSpec/NestedGroups:
+  Enabled: false
+
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/LetSetup:
+  Enabled: false
