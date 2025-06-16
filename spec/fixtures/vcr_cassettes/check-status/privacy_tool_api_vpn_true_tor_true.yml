@@ -1,0 +1,90 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://vpnapi.io/api/1.2.3.4?key=fake-api-key
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - vpnapi.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 16 Jun 2025 15:01:46 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Vary:
+      - Accept, Cookie
+      Allow:
+      - GET, HEAD, OPTIONS
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - same-origin
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=rD0IV82pFInTd439HKNim4ltkkh%2FHucM%2B753hGtdaRGJnxqcPaiC2nzpPgJOVGbceTYXPfBLqiTVjkno4Xz7EPf2OVwQdXAQ9MeEY0dwNEodcFobGhGF%2Bl12mg%3D%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 950b2f33e8920370-MAD
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Server-Timing:
+      - cfL4;desc="?proto=TCP&rtt=13110&min_rtt=12878&rtt_var=5294&sent=4&recv=6&lost=0&retrans=0&sent_bytes=2786&recv_bytes=791&delivery_rate=195426&cwnd=251&unsent_bytes=0&cid=08c7e416dfd888b5&ts=85&x=0"
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+            "ip": "1.2.3.4",
+            "security": {
+                "vpn": true,
+                "proxy": false,
+                "tor": true,
+                "relay": false
+            },
+            "location": {
+                "city": "Cáceres",
+                "region": "Extremadura",
+                "country": "Spain",
+                "continent": "Europe",
+                "region_code": "EX",
+                "country_code": "ES",
+                "continent_code": "EU",
+                "latitude": "39.4732",
+                "longitude": "-6.3725",
+                "time_zone": "Europe/Madrid",
+                "locale_code": "en",
+                "metro_code": "",
+                "is_in_european_union": true
+            },
+            "network": {
+                "network": "1.1.1.1/13",
+                "autonomous_system_number": "AS3352",
+                "autonomous_system_organization": "Company S.a.u.."
+            }
+        }
+  recorded_at: Mon, 16 Jun 2025 15:01:46 GMT
+recorded_with: VCR 6.3.1
